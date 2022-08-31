@@ -4,7 +4,9 @@ import argparse
 from glob import glob
 
 from PIL import Image
-import tensorflow as tf
+#import tensorflow as tf
+import tensorflow._api.v2.compat.v1 as tf
+tf.disable_v2_behavior()
 
 from model import lowlight_enhance
 from utils import *
